@@ -1,0 +1,18 @@
+CREATE TABLE IF NOT EXISTS public.autori
+(
+    id_autor integer NOT NULL,
+    nume_autor character varying(100) NOT NULL,
+    prenume_autor character varying(100) NOT NULL,
+    PRIMARY KEY (id_autor)
+);
+
+INSERT INTO public.autori (id_autor, nume_autor, prenume_autor) VALUES
+(1, 'Tolkien', 'J.R.R.'),
+(2, 'Rowling', 'J.K.'),
+(3, 'Orwell', 'George'),
+(4, 'Hemingway', 'Ernest'),
+(5, 'Austen', 'Jane'),
+(6, 'Dickens', 'Charles'),
+(7, 'Fitzgerald', 'F. Scott'),
+(8, 'Shakespeare', 'William'),
+(9, 'Dostoevsky', 'Fyodor');

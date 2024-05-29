@@ -1,0 +1,47 @@
+drop table Carti;
+
+
+
+drop directory '1_carti';
+ 
+CREATE DIRECTORY carti_csv_dir2 AS 'D:\oracle\data2';
+GRANT ALL ON DIRECTORY carti_csv_dir2 TO PUBLIC;
+ 
+
+CREATE TABLE Carti (
+    id_carte NUMBER,
+    isbn VARCHAR2(13),
+    titlu_carte VARCHAR2(100),
+    data_publicare DATE,
+    numar_pagini NUMBER,
+    nume_editura VARCHAR2(100),
+    categorie VARCHAR2(50),
+    descriere VARCHAR2(255),
+    pret_carte NUMBER,
+    id_autor NUMBER
+)
+ORGANIZATION EXTERNAL (
+  TYPE ORACLE_LOADER
+  DEFAULT DIRECTORY carti_csv_dir2
+  ACCESS PARAMETERS (
+    RECORDS DELIMITED BY NEWLINE SKIP 1
+    FIELDS TERMINATED BY ','
+    MISSING FIELD VALUES ARE NULL
+    (
+      id_carte,
+      isbn,
+      titlu_carte,
+      data_publicare DATE 'MM/DD/YYYY',
+      numar_pagini,
+      nume_editura,
+      categorie,
+      descriere,
+      pret_carte,
+      id_autor
+    )
+  )
+  LOCATION ('1_carti.csv')
+)
+REJECT LIMIT UNLIMITED;
+ 
+SELECT * FROM Carti;

@@ -1,0 +1,16 @@
+
+// Creare link database din postgres
+
+ALTER SESSION CLOSE DATABASE LINK dblink;
+DROP DATABASE LINK dblink;
+CREATE DATABASE LINK dblink
+   CONNECT TO "postgres" IDENTIFIED BY "1395"
+   USING 'PG';
+   
+   
+SELECT * FROM user_db_links;
+
+
+SELECT * FROM "autori"@dblink;
+
+
