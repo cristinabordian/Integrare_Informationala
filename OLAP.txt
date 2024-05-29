@@ -1,0 +1,58 @@
+##OLAP_NR_CARTI_AN_EDITURA
+
+SELECT 
+    EXTRACT(YEAR FROM c.data_publicare) AS an_publicare, 
+    c.nume_editura, 
+    COUNT(c.id_carte) AS numar_carti
+FROM 
+    carti c
+GROUP BY 
+    EXTRACT(YEAR FROM c.data_publicare), 
+    c.nume_editura
+ORDER BY 
+    an_publicare, 
+    c.nume_editura
+
+------------------------------------------------------------------------------
+
+
+##OLAP_NR_CARTI_AUTORI
+SELECT 
+    a."id_autor", 
+    a."nume_autor", 
+    a."prenume_autor", 
+    COUNT(c.id_carte) AS numar_carti
+FROM 
+    "autori"@dblink a
+LEFT JOIN 
+    carti c ON a."id_autor" = c.id_autor
+GROUP BY 
+    a."id_autor", 
+    a."nume_autor", 
+    a."prenume_autor"
+ORDER BY 
+    numar_carti DESC
+
+------------------------------------
+
+##OLAP_NR_CARTI_AUTORI_AN
+
+SELECT 
+    a."id_autor", 
+    a."nume_autor", 
+    a."prenume_autor", 
+    EXTRACT(YEAR FROM c.data_publicare) AS an_publicare, 
+    COUNT(c.id_carte) AS numar_carti
+FROM 
+    "autori"@dblink a
+JOIN 
+    carti c ON a."id_autor" = c.id_autor
+GROUP BY 
+    a."id_autor", 
+    a."nume_autor", 
+    a."prenume_autor", 
+    EXTRACT(YEAR FROM c.data_publicare)
+ORDER BY 
+    a."id_autor", 
+    an_publicare
+
