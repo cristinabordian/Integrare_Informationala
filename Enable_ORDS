@@ -1,0 +1,15 @@
+ENABLE ORDS - Oracle Rest Data Services
+
+Enabls ORDS for the schema ordsuser for REST services and a base path URL mapping.
+
+DECLARE 
+   PRAGMA AUTONOMOUS_TRANSACTION; 
+BEGIN 
+    ORDS.ENABLE_SCHEMA(p_enabled => TRUE,
+                       p_schema => 'urdsuser',
+                       p_url_mapping_type => 'BASE_PATH',
+                       p_url_mapping_pattern => 'ordsuser',
+                       p_auto_rest_auth => FALSE); 
+    commit; 
+END; 
+/
