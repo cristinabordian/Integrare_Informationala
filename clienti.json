@@ -1,0 +1,116 @@
+{
+    "clienti": {
+        "client": [
+            {
+                "id_client": 101,
+                "nume_client": "Popescu",
+                "prenume_client": "Ion",
+                "email": "ion.popescu@example.com",
+                "data_nastere": "1980-01-01",
+                "nr_telefon": "0712345678",
+                "oras": "Bucuresti",
+                "tara": "Romania",
+                "data_inregistrare": "2020-01-01"
+            },
+            {
+                "id_client": 102,
+                "nume_client": "Ionescu",
+                "prenume_client": "Maria",
+                "email": "maria.ionescu@example.com",
+                "data_nastere": "1990-02-02",
+                "nr_telefon": "0723456789",
+                "oras": "Cluj-Napoca",
+                "tara": "Romania",
+                "data_inregistrare": "2021-02-02"
+            },
+            {
+                "id_client": 103,
+                "nume_client": "Georgescu",
+                "prenume_client": "Andrei",
+                "email": "andrei.georgescu@example.com",
+                "data_nastere": "1985-03-03",
+                "nr_telefon": "0734567890",
+                "oras": "Timisoara",
+                "tara": "Romania",
+                "data_inregistrare": "2019-03-03"
+            },
+            {
+                "id_client": 104,
+                "nume_client": "Marinescu",
+                "prenume_client": "Elena",
+                "email": "elena.marinescu@example.com",
+                "data_nastere": "1995-04-04",
+                "nr_telefon": "0745678901",
+                "oras": "Iasi",
+                "tara": "Romania",
+                "data_inregistrare": "2018-04-04"
+            },
+            {
+                "id_client": 105,
+                "nume_client": "Vasilescu",
+                "prenume_client": "Cristina",
+                "email": "cristina.vasilescu@example.com",
+                "data_nastere": "1988-05-05",
+                "nr_telefon": "0756789012",
+                "oras": "Constanta",
+                "tara": "Romania",
+                "data_inregistrare": "2017-05-05"
+            },
+            {
+                "id_client": 106,
+                "nume_client": "Dumitrescu",
+                "prenume_client": "Mihai",
+                "email": "mihai.dumitrescu@example.com",
+                "data_nastere": "1977-06-06",
+                "nr_telefon": "0767890123",
+                "oras": "Brasov",
+                "tara": "Romania",
+                "data_inregistrare": "2016-06-06"
+            },
+            {
+                "id_client": 107,
+                "nume_client": "Stefanescu",
+                "prenume_client": "Ana",
+                "email": "ana.stefanescu@example.com",
+                "data_nastere": "1992-07-07",
+                "nr_telefon": "0778901234",
+                "oras": "Oradea",
+                "tara": "Romania",
+                "data_inregistrare": "2015-07-07"
+            },
+            {
+                "id_client": 108,
+                "nume_client": "Radu",
+                "prenume_client": "George",
+                "email": "george.radu@example.com",
+                "data_nastere": "1983-08-08",
+                "nr_telefon": "0789012345",
+                "oras": "Ploiesti",
+                "tara": "Romania",
+                "data_inregistrare": "2014-08-08"
+            },
+            {
+                "id_client": 109,
+                "nume_client": "Stanescu",
+                "prenume_client": "Monica",
+                "email": "monica.stanescu@example.com",
+                "data_nastere": "1999-09-09",
+                "nr_telefon": "0790123456",
+                "oras": "Sibiu",
+                "tara": "Romania",
+                "data_inregistrare": "2013-09-09"
+            },
+            {
+                "id_client": 110,
+                "nume_client": "Constantinescu",
+                "prenume_client": "Razvan",
+                "email": "razvan.constantinescu@example.com",
+                "data_nastere": "1975-10-10",
+                "nr_telefon": "0701234567",
+                "oras": "Arad",
+                "tara": "Romania",
+                "data_inregistrare": "2012-10-10"
+            }
+        ]
+    }
+}
